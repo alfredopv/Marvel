@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Marvel</string>
+    <string name="atras">Atras</string>
+    <string name="adelante">Adelante</string>
 </resources>
