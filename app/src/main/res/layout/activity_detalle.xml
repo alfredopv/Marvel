@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorRojoFondo"
     tools:context="com.example.alfredo.marvel.DetalleActivity">
 
-    <ImageView
+    <com.android.volley.toolbox.NetworkImageView
         android:id="@+id/imagenSuperheroe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,6 +27,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textSize="20dp"
+        android:textColor="@color/colorBlanquito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenSuperheroe" />
@@ -38,6 +41,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textSize="17dp"
+        android:textColor="@color/colorBlanquito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idSuperheroe" />
@@ -50,6 +55,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textSize="17dp"
+        android:textColor="@color/colorBlanquito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombreSuperheroe" />
@@ -62,7 +69,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textSize="17dp"
+        android:textColor="@color/colorBlanquito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fechaSuperheroe" />
+
 </android.support.constraint.ConstraintLayout>

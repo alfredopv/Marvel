@@ -187,10 +187,23 @@ public class MainActivity extends Activity {
         mQueue = VolleySingleton.getInstance(this).getRequestQueue();
         jsonMarvel(getMarvelString(offset), marvelAdapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                MarvelDude md = marvelAdapter.getItem(i);
+                Toast.makeText(getApplicationContext(),md.id, Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(MainActivity.this, DetalleActivity.class);
+                intent.putExtra("id", md.id);
+                startActivity(intent);
+            }
+        });
+
 
     }
     public void adelante(View view){
-        if(offset < 900){
+        if(offset < 1400){
             offset += 100;
         }
 
@@ -201,6 +214,20 @@ public class MainActivity extends Activity {
         listView.setAdapter(marvelAdapter);
         mQueue = VolleySingleton.getInstance(this).getRequestQueue();
         jsonMarvel(getMarvelString(offset), marvelAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                MarvelDude md = marvelAdapter.getItem(i);
+                Toast.makeText(getApplicationContext(),md.id, Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(MainActivity.this, DetalleActivity.class);
+                intent.putExtra("id", md.id);
+                startActivity(intent);
+            }
+        });
+
         /*
         String url = getMarvelString(offset);
         setContentView(R.layout.activity_main);
